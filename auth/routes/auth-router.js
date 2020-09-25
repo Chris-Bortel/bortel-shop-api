@@ -11,13 +11,12 @@ const users = require('../models/users-model.js');
 const router = express.Router();
 
 router.post('/signup', async (req, res, next) => {
-
   try {
     let obj = {
       username: req.body.username,
       password: req.body.password,
-      role: req.body.role
-    }
+      role: req.body.role,
+    };
 
     // Create a new instance from the schema, using that object
     let record = new users(obj);
@@ -30,41 +29,49 @@ router.post('/signup', async (req, res, next) => {
     res.set('auth', token);
     let object = {
       token: token,
-      user: newUser
-    }
+      user: newUser,
+    };
     res.status(200).json(object);
-
-
   } catch (e) {
     next(e.message);
   }
-
 });
+
+router.get('/users', bearer, getUsers);
+async function getUsers(req, res, next) {
+  try {
+    let allUsers = await users.find({});
+    res.set('auth', req.token);
+    res.status(200).json(allUsers);
+  } catch (e) {
+    next(e);
+  }
+}
 
 // adding ,basicAuth does?
 router.post('/signin', basicAuth, (req, res, next) => {
   res.set('auth', req.token);
   let object = {
     token: req.token,
-    user: req.user
-  }
+    user: req.user,
+  };
   res.status(200).json(object);
 });
 
 router.get('/secret', bearer, (req, res) => {
-  res.status(200).send(`Welcome, ${req.user.username}`)
+  res.status(200).send(`Welcome, ${req.user.username}`);
 });
 
 router.get('/article', bearer, can('read'), (req, res) => {
-  res.status(200).send('You can read it')
-})
+  res.status(200).send('You can read it');
+});
 
 router.post('/article', bearer, can('create'), (req, res) => {
-  res.status(200).send('You can create it')
-})
+  res.status(200).send('You can create it');
+});
 
 router.put('/article', bearer, can('update'), (req, res) => {
-  res.status(200).send('You can update it')
-})
+  res.status(200).send('You can update it');
+});
 
 module.exports = router;
