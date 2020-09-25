@@ -34,3 +34,5 @@ describe('Post /signup should add a new user', () => {
     expect(response.body.token).toBeDefined();
   });
 });
+
+describe('Test v1 route', () => {});
