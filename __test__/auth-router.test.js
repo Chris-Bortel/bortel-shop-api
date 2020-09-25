@@ -4,6 +4,7 @@ const supergoose = require('@code-fellows/supergoose');
 
 const server = require('../server.js');
 const request = supergoose(server.app);
+const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 describe(' It should log a 404 for a route that does not exist', () => {
@@ -21,6 +22,15 @@ describe('Post /signup should add a new user', () => {
       role: 'admin',
     };
     let response = await request.post('/signup').send(obj);
+    const parsedToken = jwt.verify(response.body.token, process.env.SECRET);
+    console.log('ParsedToken:::::', parsedToken);
+    expect(response.body.token).toBeTruthy();
+    expect(response.body.user.username).toEqual('chris');
     expect(response.status).toEqual(200);
+  });
+
+  it('Post /signin should sign the existing user in with correct credentials', async () => {
+    let response = await request.post('/signin').auth('chris', 'password');
+    expect(response.body.token).toBeDefined();
   });
 });
