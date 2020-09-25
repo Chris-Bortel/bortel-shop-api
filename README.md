@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [lab-13 pull request](https://github.com/Chris-Bortel-401-advanced-javascript/lab-13-auth-server/pull/1)
+- [lab-13 pull request](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control/pull/1)
 <!-- - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
 - [front-end application](http://xyz.com) (when applicable) -->
@@ -31,9 +31,18 @@
 
 #### Tests
 
+- `npm test` file name of the test
 <!-- - How do you run tests?
 - Any tests of note?
 - Describe any tests that you did not complete, skipped, etc -->
+
+#### Collaboration
+
+- Davee Sok
+- Joe Pennock
+- Ben Hill
+- Diane Stephani
+- Sean Murray
 
 #### UML
 
