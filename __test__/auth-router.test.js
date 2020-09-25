@@ -15,13 +15,13 @@ describe('Post /signup should add a new user', () => {
       role: 'admin',
     };
     let response = await request.post('/signup').send(obj);
-    const parsedToken = jwt.verify(response.body.token, process.env.SECRET);
+    jwt.verify(response.body.token, process.env.SECRET);
     expect(response.body.token).toBeTruthy();
     expect(response.body.user.username).toEqual('chris');
     expect(response.status).toEqual(200);
   });
 
-  it('Post /signin should sign the existing user in with correct credentials', async () => {
+  it('Signs the existing user in with correct credentials', async () => {
     let response = await request.post('/signin').auth('chris', 'password');
     expect(response.body.token).toBeDefined();
   });
