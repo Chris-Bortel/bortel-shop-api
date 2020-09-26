@@ -47,9 +47,9 @@ router.delete('/:model/:id', bearer, permissions('delete'), handleDelete);
 // Route Handlers
 async function handleGetAll(request, response, next) {
   try {
-    let list = await request.model.get(request.query);
+    let allResults = await request.model.get(request.query);
     const output = {
-      count: list.length,
+      count: allResults.length,
       results: list,
     };
     response.status(200).json(output);
