@@ -15,7 +15,8 @@ describe('Post /signup should add a new user', () => {
       role: 'admin',
     };
     let response = await request.post('/signup').send(obj);
-    jwt.verify(response.body.token, process.env.SECRET);
+    let jwtVar = jwt.verify(response.body.token, process.env.SECRET);
+    console.log('jwtVar', jwtVar);
     expect(response.body.token).toBeTruthy();
     expect(response.body.user.username).toEqual('chris');
     expect(response.status).toEqual(200);
