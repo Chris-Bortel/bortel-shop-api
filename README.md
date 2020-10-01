@@ -16,23 +16,29 @@
 #### `.env` requirements
 
 - `PORT=3000`
+
 - `MONGODB_URI=mongodb://localhost:27017/auth`
+
 - Add your SECRET to the .env `SECRET=yoursecret`
 
-#### How to initialize/run your application(local)
+#### How to initialize/run the application(local)
 
 - Run heroku logs `heroku logs --tail --app auth-server-cb`
 
-- http post https://auth-server-cb.herokuapp.com/signup username=chris password=password
+- httpie: `http post https://auth-server-cb.herokuapp.com/signup username=chris password=password`
 
-- http post https://auth-server-cb.herokuapp.com/signin -a chris:password
+- httpie: `http post https://auth-server-cb.herokuapp.com/signin -a chris:password`
 
-#### How to initialize/run your application(local)
+#### How to initialize/run application(local)
 
 - start the application `nodemon index.js`
+
 - signup using a username and password <br>
+
   `http post :3000/signup username="chris" password="maddie"`
+
 - to view your information <br>
+
   `http :3000/secret "Authorization:Bearer yOurBiG0lTokenklajsdfjklh;qwerp9u;oiujaaf/afdslkh.lkjhasdf-lkuahgsdflkjheuasdlkfugh-_mc`
 
 #### How to use your library (where applicable)
