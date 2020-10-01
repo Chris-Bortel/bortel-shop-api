@@ -19,7 +19,15 @@
 - `MONGODB_URI=mongodb://localhost:27017/auth`
 - `SECRET=yoursecret`
 
-#### How to initialize/run your application
+#### How to initialize/run your application(local)
+
+- Run heroku logs `heroku logs --tail --app auth-server-cb`
+
+- http post https://auth-server-cb.herokuapp.com/signup username=chris password=password
+
+- http post https://auth-server-cb.herokuapp.com/signin -a chris:password
+
+#### How to initialize/run your application(local)
 
 - start the application `nodemon index.js`
 - signup using a username and password <br>
