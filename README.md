@@ -1,17 +1,12 @@
-# LAB - Class 13
+# Authenticated Api Server
 
 ## Project: auth-server
-
-[deployed at heroku](https://auth-server-cb.herokuapp.com/)
 
 ### Author: Chris Bortel
 
 ### Links and Resources
 
-- [lab-13 pull request](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control/pull/1)
-<!-- - [ci/cd](http://xyz.com) (GitHub Actions)
-- [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable) -->
+[deployed at heroku](https://auth-server-cb.herokuapp.com/)
 
 ### Setup
 
