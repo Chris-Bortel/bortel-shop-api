@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-[deployed at heroku](https://auth-server-cb.herokuapp.com/)
+[Deployed at heroku](https://auth-server-cb.herokuapp.com/)
 
 ### Setup
 
@@ -28,13 +28,13 @@
 
 #### How to initialize/run application(local)
 
-- start the application `nodemon index.js`
+- Start the application `nodemon index.js`
 
-- signup using a username and password <br>
+- Signup using a username and password <br>
 
   `http post :3000/signup username="chris" password="maddie"`
 
-- to view your information <br>
+- To view your information <br>
 
   `http :3000/secret "Authorization:Bearer yOurBiG0lTokenklajsdfjklh;qwerp9u;oiujaaf/afdslkh.lkjhasdf-lkuahgsdflkjheuasdlkfugh-_mc`
 
