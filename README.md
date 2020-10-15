@@ -2,6 +2,8 @@
 
 ## Project: auth-server
 
+[deployed at heroku](https://auth-server-cb.herokuapp.com/)
+
 ### Author: Chris Bortel
 
 ### Links and Resources
