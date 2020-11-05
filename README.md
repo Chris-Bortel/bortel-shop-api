@@ -5,7 +5,7 @@
 ### Author: Chris Bortel
 
 ### Links and Resources
-
+- [Deployed to Heroku]( https://auth-server-cb.herokuapp.com/)
 - [lab-13 pull request](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control/pull/1)
 <!-- - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
