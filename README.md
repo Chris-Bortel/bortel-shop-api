@@ -5,7 +5,7 @@
 ### Author: Chris Bortel
 
 ### Links and Resources
-- [Deployed to Heroku]( https://auth-server-cb.herokuapp.com/)
+- [Deployed to Heroku](https://auth-server-cb.herokuapp.com/)
 - [lab-13 pull request](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control/pull/1)
 <!-- - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
@@ -38,6 +38,9 @@ http :3000/api/v1/categories
 
 http put :3000/api/v1/categories description="Both desktops and laptops"
 ```
+
+
+### Authorization
 
 #### How to use your library (where applicable)
 
