@@ -14,6 +14,5 @@
  */
 module.exports = (err, req, res, next) => {
   let error = { error: err };
-  console.log('Error', err);
   res.status(500).json(error).end();
 };
