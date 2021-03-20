@@ -24,7 +24,6 @@ const roles = {
 
 users.pre('save', async function () {
   this.password = await bcrypt.hash(this.password, 5);
-  console.log('The password is', this.password);
 });
 
 users.methods.can = function (capability) {
