@@ -6,10 +6,13 @@ let mongoose = require('mongoose');
 let server = require('./server.js');
 
 // connect to mongo
-mongoose.connect(process.env.MONGODB_URI, {
+const options = {
   useUnifiedTopology: true,
+  useCreateIndex: true,
   useNewUrlParser: true,
-});
+};
 
-// start the server
-server.start(process.env.PORT);
+mongoose.connect(process.env.MONGODB_URI, options)
+  .then(() => {
+    server.start(process.env.PORT);
+})

@@ -43,6 +43,7 @@ users.methods.generateToken = function () {
 
 // Works without an instance, ie. users.validateBasic()
 users.statics.validateBasic = async function (username, password) {
+  
   // Look up the user by the username
   let user = await this.findOne({ username: username });
 
