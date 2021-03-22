@@ -24,7 +24,6 @@ const roles = {
 
 users.pre('save', async function () {
   this.password = await bcrypt.hash(this.password, 5);
-  console.log('The password is', this.password);
 });
 
 users.methods.can = function (capability) {
@@ -44,6 +43,7 @@ users.methods.generateToken = function () {
 
 // Works without an instance, ie. users.validateBasic()
 users.statics.validateBasic = async function (username, password) {
+  
   // Look up the user by the username
   let user = await this.findOne({ username: username });
 

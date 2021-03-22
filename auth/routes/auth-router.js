@@ -31,7 +31,7 @@ router.post('/signup', async (req, res, next) => {
       token: token,
       user: newUser,
     };
-    res.status(200).json(object);
+    res.status(201).json(object);
   } catch (e) {
     next(e.message);
   }
@@ -48,7 +48,6 @@ async function getUsers(req, res, next) {
   }
 }
 
-// adding ,basicAuth does?
 router.post('/signin', basicAuth, (req, res, next) => {
   res.set('auth', req.token);
   let object = {
@@ -67,11 +66,11 @@ router.get('/article', bearer, can('read'), (req, res) => {
 });
 
 router.post('/article', bearer, can('create'), (req, res) => {
-  res.status(200).send('You can create it');
+  res.status(201).send('You can create it');
 });
 
 router.put('/article', bearer, can('update'), (req, res) => {
-  res.status(200).send('You can update it');
+  res.status(201).send('You can update it');
 });
 
 module.exports = router;

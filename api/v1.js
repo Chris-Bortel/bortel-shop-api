@@ -76,21 +76,21 @@ function handleGetOne(request, response, next) {
 function handlePost(request, response, next) {
   request.model
     .create(request.body)
-    .then((result) => response.status(200).json(result))
+    .then((result) => response.status(201).json(result))
     .catch(next);
 }
 
 function handlePut(request, response, next) {
   request.model
     .update(request.params.id, request.body)
-    .then((result) => response.status(200).json(result))
+    .then((result) => response.status(201).json(result))
     .catch(next);
 }
 
 function handleDelete(request, response, next) {
   request.model
     .delete(request.params.id)
-    .then((result) => response.status(200).json(result))
+    .then((result) => response.status(204).json(result))
     .catch(next);
 }
 

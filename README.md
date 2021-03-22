@@ -17,7 +17,7 @@
 
 - `PORT=3000`
 - `MONGODB_URI=mongodb://localhost:27017/auth`
-- Add your SECRET to the .env `SECRET=yoursecret`
+- Add your SECRET to the .env
 
 #### How to initialize/run your application
 
