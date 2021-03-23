@@ -1,28 +1,43 @@
-# LAB - Class 13
-
-## Project: auth-server
-
+# Bortel's Shop
 ### Author: Chris Bortel
+### Links and resources
+- **Bortel's Shop backend** [deployed to Heroku](https://auth-server-cb.herokuapp.com/)
+Crud application that is used in conjunction with an e-commerce `Bortel's Shop` storefront React.js based [frontend](https://github.com/Chris-Bortel-401-advanced-javascript/bortel-shop).  
+##  API Server
+- Powers the `Bortel's Shop` storefront
+- Categories and Products
 
-### Links and Resources
-- [Deployed to Heroku](https://auth-server-cb.herokuapp.com/)
-- [lab-13 pull request](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control/pull/1)
-<!-- - [ci/cd](http://xyz.com) (GitHub Actions)
-- [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable) -->
+Built as an authenticated backend for several types of applications. Including an e-commerce storefront, a TODO list application, and a REST api interface(think Postman or Insomnia).
 
-### Setup
+Utilizes a Mongo date
+## Authenticated and authorized server (Currently not plugged in to the frontend)
+- Technologies used: JavaScript, Node.js, Express, Superagent, Axios, Bcyrpt, Base-64, JWT, MongoDB
+- Authorization that includes `guest, author, editor, admin`
+```
+const roles = {
+  guest: ['read'],
+  author: ['read', 'create'],
+  editor: ['read', 'update', 'delete'],
+  admin: ['read', 'create', 'update', 'delete'],
+};
+``` 
 
-#### `.env` requirements
+## Development setup
+Clone to your local machine
+```
+git clone https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control.git
+```
+Create a .env file and add a `PORT`, `MONGODB_URI`, and a `SECRET`
+### `.env` requirements
 
-- `PORT=3000`
+- `PORT=<YourPort>`
 - `MONGODB_URI=mongodb://localhost:27017/auth`
-- Add your SECRET to the .env
+- Add your `SECRET` to the .env
 
-#### How to initialize/run your application
+## How to initialize/run the application
 
 - start the application `nodemon index.js`
-- signup using a username and password <br>
+- Signup using a username and password <br>
   `http post :3000/signup username="chris" password="maddie"`
 - to view your information <br>
   `http :3000/secret "Authorization:Bearer yOurBiG0lTokenklajsdfjklh;qwerp9u;oiujaaf/afdslkh.lkjhasdf-lkuahgsdflkjheuasdlkfugh-_mc`
@@ -53,13 +68,7 @@ http put :3000/api/v1/categories description="Both desktops and laptops"
 
 #### Attributions
 
-#### Collaboration
-
-- Davee Sok
-- Joe Pennock
-- Ben Hill
-- Diane Stephani
-- Sean Murray
+### Citation
 
 #### UML
 
