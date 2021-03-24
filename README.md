@@ -1,8 +1,46 @@
-# Bortel's Shop
-### Author: Chris Bortel
+# Bortel's Shop - backend 
+Author: Chris Bortel
+
+Node.js and Express Authenticated api server that powers a storefront built with React and React Redux
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- **Table of Contents** 
+
+  - [Technologies used:](#technologies-used)
+  - [Description](#description)
+    - [Links and resources](#links-and-resources)
+  - [API Server](#api-server)
+  - [Auth Server](#auth-server)
+  - [Development setup](#development-setup)
+    - [`.env` requirements](#env-requirements)
+  - [How to initialize/run the application](#how-to-initializerun-the-application)
+    - [Api server](#api-server)
+    - [Authentication server](#authentication-server)
+      - [Running the initial api](#running-the-initial-api)
+    - [Authorization](#authorization)
+      - [How to use your library (where applicable)](#how-to-use-your-library-where-applicable)
+      - [Tests](#tests)
+      - [Attributions](#attributions)
+    - [Citation](#citation)
+      - [UML](#uml)
+    - [Notes/Bugs](#notesbugs) -->
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+
+### Technologies used:
+- JavaScript, Node.js, Express, Superagent, Axios, Bcyrpt, Base-64, JWT, MongoDB
+
+
+## Description
+
 ### Links and resources
 - **Bortel's Shop backend** [deployed to Heroku](https://auth-server-cb.herokuapp.com/)
 Crud application that is used in conjunction with an e-commerce `Bortel's Shop` storefront React.js based [frontend](https://github.com/Chris-Bortel-401-advanced-javascript/bortel-shop).  
+
+
 ##  API Server
 - Powers the `Bortel's Shop` storefront
 - Categories and Products
@@ -10,9 +48,10 @@ Crud application that is used in conjunction with an e-commerce `Bortel's Shop` 
 Built as an authenticated backend for several types of applications. Including an e-commerce storefront, a TODO list application, and a REST api interface(think Postman or Insomnia).
 
 Utilizes a Mongo date
-## Authenticated and authorized server 
+## Auth Server 
 (Currently not plugged in to the frontend)
-### Technologies used: JavaScript, Node.js, Express, Superagent, Axios, Bcyrpt, Base-64, JWT, MongoDB
+
+
 - Authorization that includes `guest, author, editor, admin`
 ```
 const roles = {
