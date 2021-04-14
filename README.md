@@ -1,8 +1,12 @@
-# Bortel's Shop - backend 
+# Bortel Shop - API 
 Author: Chris Bortel
 
-Node.js and Express Authenticated api server that powers a storefront built with React and React Redux
+Crud Node.js and Express Authenticated api server that powers the [Bortel-Shop](https://github.com/Chris-Bortel-401-advanced-javascript/bortel-shop) - Client.
 
+### Deployments 
+- [Bortel-Shop](https://auth-server-cb.herokuapp.com) - API
+- [Bortel-Shop](https://www.bortel-shop.com) - Client
+ 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- **Table of Contents** 
@@ -36,18 +40,18 @@ Node.js and Express Authenticated api server that powers a storefront built with
 
 ## Description
 
-### Links and resources
-- **Bortel's Shop backend** [deployed to Heroku](https://auth-server-cb.herokuapp.com/)
-Crud application that is used in conjunction with an e-commerce `Bortel's Shop` storefront React.js based [frontend](https://github.com/Chris-Bortel-401-advanced-javascript/bortel-shop).  
+<!-- - **Bortel's Shop backend** [deployed to Heroku](https://auth-server-cb.herokuapp.com/) -->
+<!-- Crud application that is used in conjunction with an e-commerce `Bortel's Shop` storefront React.js based [frontend](https://github.com/Chris-Bortel-401-advanced-javascript/bortel-shop).   -->
 
 
-##  API Server
-- Powers the `Bortel's Shop` storefront
-- Categories and Products
+Built as an CRUD authenticated API that powers several types of applications. Including `Bortel Shop - client` 
 
-Built as an authenticated backend for several types of applications. Including an e-commerce storefront, a TODO list application, and a REST api interface(think Postman or Insomnia).
+<!-- TODO: Should I include this? -->
+, <br>  a TODO list application, and a REST api interface(think Postman or Insomnia).
 
-Utilizes a Mongo date
+- Categories and Products 
+
+Utilizes a Mongo database
 ## Auth Server 
 (Currently not plugged in to the frontend)
 
@@ -62,7 +66,7 @@ const roles = {
 };
 ``` 
 
-## Development setup
+## Installation and development setup
 Clone to your local machine
 ```
 git clone https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control.git
@@ -99,9 +103,6 @@ http :3000/api/v1/categories
 http put :3000/api/v1/categories description="Both desktops and laptops"
 ```
 
-
-### Authorization
-
 #### How to use your library (where applicable)
 
 #### Tests
@@ -120,4 +121,4 @@ This application needs tests, I am currently working on those, and in the future
 <!-- Link to an image of the UML for your application and response to events -->
 
 ### Notes/Bugs
-Working on combining repositories
+
