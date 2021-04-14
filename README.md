@@ -5,7 +5,7 @@ Crud Node.js and Express Authenticated api server that powers the [Bortel-Shop](
 
 ### Deployments 
 - [Bortel-Shop](https://auth-server-cb.herokuapp.com) - API
-- [Bortel-Shop](https://www.bortel-shop.com) - Client
+
  
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
